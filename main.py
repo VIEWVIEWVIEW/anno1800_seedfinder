@@ -90,7 +90,7 @@ newworldpirate = 1    # 0 or 1.
 # L1, L2, L3 etc -> Large sized islands
 # M1, M2, M3 etc -> Mid sized islands
 # S1, S2, S3 etc -> Small sized islands
-# CI -> Community Island (Anno Trade Union Island
+# CI -> Community Island (Anno Trade Union Island)
 # The "R" suffix implies that this island has rivers.
 
 # Old world / capes scores:

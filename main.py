@@ -63,15 +63,15 @@ from time import time
 
 
 # General map settings:
-maptype     = "Corners"
-mapsize     = "Large"
-islandsize  = "Large"
-difficulty  = "Normal"
-gamemode    = "SandboxSingleplayer"
+maptype     = "Corners" # Archipelago, Atoll, Corners, Arc, Snowflake
+mapsize     = "Large" # Small, Medium, Large
+islandsize  = "Large" 
+difficulty  = "Normal" # Normal, Hard
+gamemode    = "SandboxSingleplayer" # SandboxSingleplayer, SandboxMultilayer, CampaignMode
 dlc12       = True  # Is DLC 12 (New World Rising) active (True/False). If True, the new world is larger.
 
 # These settings affect some small islands only.
-oldworldnpcs   = 2    # Does not include Archibald and pirate.
+oldworldnpcs   = 2    # This does does not affect Archibald and pirates; which will spawn always. Only competitors are affected by this setting.
 oldworldpirate = 1    # 0 or 1.
 newworldnpcs   = 1    # 0 or 1.
 newworldpirate = 1    # 0 or 1.
@@ -86,6 +86,12 @@ newworldpirate = 1    # 0 or 1.
 # Unspecified islands have a score of 0.
 # So if we only care about the largest islands, we can comment out medium+small islands.
 # This will find the best large islands, though medium islands may suffer.
+
+# L1, L2, L3 etc -> Large sized islands
+# M1, M2, M3 etc -> Mid sized islands
+# S1, S2, S3 etc -> Small sized islands
+# CI -> Community Island (Anno Trade Union Island
+# The "R" suffix implies that this island has rivers.
 
 # Old world / capes scores:
 scores = {'L1':  29977, 'L2':  27159, 'L3':  26100,
@@ -145,7 +151,7 @@ scoresnew = {k:v*0.2 for k,v in scoresnew.items()}
 # New world islands exclusive to normal difficulty: M2 M4 M7 M8 M10 L1 L3 L4 L6 L7
 # New world islands exclusive to hard difficulty:   M2R M4R M7R M8R M10R L1R L3R L4R L6R L7R
 
-# All islands found here may not appear in the respective world.
+# All islands which are "unwanted" are excluded from the seeds. The default setting is to exclude all river islands, so you get islands without rivers.
 # If you do not care about rivers but only scores, you would use "" here.
 unwanted    = "M1R M2R M3R M4R M5R M6R M7R M8R M9R CIR L1R L2R L3R L4R L5R L6R L7R L8R L9R L10R L11R L12R L13R L14R " # Old+cape
 unwantednew = "M1R M2R M3R M4R M5R M6R M7R M8R M9R M10R L1R L2R L3R L4R L5R L6R L7R L8R"     # New world
